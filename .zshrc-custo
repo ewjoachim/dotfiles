@@ -1,0 +1,45 @@
+export WORKON_HOME=/Users/joachim/Envs
+
+alias editz="vim ~/.zshrc-custo && source ~/.zshrc-custo"
+
+alias s="cd .."
+
+alias ll="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+alias gss="git stash save"
+alias gsp="git stash pop"
+alias gco="git checkout"
+alias gfe="git fetch --all"
+alias gr="git rebase"
+alias gri="git rebase --interactive"
+alias gpf="git push --force"
+alias gl="git nicelog"
+alias gpff="git pull --ff-only"
+alias gfe="git fetch --all --prune"
+alias subl="LC_ALL=C.UTF-8 /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias gprom="git pull --rebase origin master"
+alias gproma="git pull --rebase origin main"
+alias gprum="git pull --rebase upstream master"
+alias griam="git rebase -i --autosquash origin/master"
+alias griama="git rebase -i --autosquash origin/main"
+alias griaum="git rebase -i --autosquash upstream/master"
+alias griaom="griad"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
+alias grs="git rebase --skip"
+
+ssp(){
+    subl "~/Envs/$1/lib/python2.7/site-packages/"
+}
+alias vs="code ."
+
+alias htmlcov='python -m webbrowser file://$(pwd)/htmlcov/index.html'
+alias htmldoc='python -m webbrowser file://$(pwd)/docs/_build/html/index.html'
+
+export PYTHONDONTWRITEBYTECODE=1
+
+alias vexb='vex $(basename "$(pwd)")'
+alias vexmb='vex -m $(basename "$(pwd)")'
+
+alias compose="docker-compose"
