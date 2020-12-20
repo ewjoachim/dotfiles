@@ -1,11 +1,17 @@
 #!/bin/bash -eu
 
+rm -rf ~/.config/zsh ~/.zshrc ~/.zshrc-custo
+
 ln -s $PWD/.config/zsh ~/.config/zsh
 ln -s $PWD/.zshrc ~/.zshrc
 ln -s $PWD/.zshrc-custo ~/.zshrc-custo
-mkdir -p ~/.zsh
-pushd ~/.zsh
-git git clone https://github.com/marlonrichert/zsh-snap.git
+
+if [ ! -d ~/.zsh/zsh-snap ] ; then
+    mkdir -p ~/.zsh
+    pushd ~/.zsh
+    git clone https://github.com/marlonrichert/zsh-snap.git
+    popd
+fi
 
 chsh -s $(which zsh)
 echo 'Restart your shell and run `znap pull`'
