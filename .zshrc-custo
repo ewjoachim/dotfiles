@@ -1,12 +1,13 @@
 export WORKON_HOME=/Users/joachim/Envs
 
-alias editz="vim ~/.zshrc-custo && source ~/.zshrc-custo"
+alias editz="vim ~/.zshrc-custo && exec zsh"
 
 alias s="cd .."
 
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
+
 alias gss="git stash save"
 alias gsp="git stash pop"
 alias gco="git checkout"
@@ -29,9 +30,6 @@ alias grc="git rebase --continue"
 alias gra="git rebase --abort"
 alias grs="git rebase --skip"
 
-ssp(){
-    subl "~/Envs/$1/lib/python2.7/site-packages/"
-}
 alias vs="code ."
 
 alias htmlcov='python -m webbrowser file://$(pwd)/htmlcov/index.html'
