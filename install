@@ -14,4 +14,4 @@ if [ ! -d ~/.zsh/zsh-snap ] ; then
 fi
 
 chsh -s $(which zsh)
-echo 'Restart your shell and run `znap pull`'
+echo 'Restart your shell and run `znap clone`'
